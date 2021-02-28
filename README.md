@@ -34,4 +34,4 @@ If you want to
 
 ## Thanks
 
-Big thanks to the 
+Big thanks to https://github.com/CM2Walki/steamcmd for doing the boilerplate steamcmd docker image, that allowed this Dockerfile to be a lot more simple.
