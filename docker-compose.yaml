@@ -1,0 +1,28 @@
+version: "3"
+services:
+  valheim_dedicated_server:
+    environment:
+      # 896660 = Valheim Dedicated Server
+      STEAMAPPID: 896660
+      # Name visible in the community server list.
+      NAME: Valheim Dedicated Server in Docker
+      # Remember to port-forward this udp port
+      PORT : 2456
+      # Name of the world files.
+      WORLD: Tissenumse
+      # NOTE: Minimum password length is 5 characters & Password cant be in the server name.
+      PASSWORD: changeme
+      # world-config folder path in the docker image.
+      SAVEDIR: /home/steam/steamapp/world-config
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - STEAMAPPID
+    volumes:
+      - ./world-config:/home/steam/steamapp/world-config      
+    expose:
+      - 2456-2458/udp
+    ports:
+      - 2456-2458:2456-2458/udp
+    
