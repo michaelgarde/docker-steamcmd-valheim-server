@@ -16,7 +16,8 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - STEAMAPPID
+        # 896660 = Valheim Dedicated Server
+        STEAMAPPID: 896660
     volumes:
       - ./world-config:/home/steam/steamapp/world-config      
     expose:
