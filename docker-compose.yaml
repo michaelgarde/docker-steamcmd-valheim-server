@@ -9,7 +9,7 @@ services:
       # Remember to port-forward this udp port
       PORT : 2456
       # Name of the world files.
-      WORLD: Tissenumse
+      WORLD: Jelling
       # NOTE: Minimum password length is 5 characters & Password cant be in the server name.
       PASSWORD: changeme
       # world-config folder path in the docker image.
